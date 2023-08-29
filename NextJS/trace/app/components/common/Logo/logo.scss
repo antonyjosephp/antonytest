@@ -1,0 +1,24 @@
+@import './../../../styles/common/colorpalettes.scss';
+
+.logo-placeholder {
+    padding: 10px 0 0 10px;
+}
+
+.logo {
+    float: left;
+}
+
+.logo img {
+    height: 90%;
+    width: 90%;
+    padding: 4px;
+}
+
+.logo-text {
+    color: $pg-neutral-white;
+    float: left;
+    font-style: var(--font-montserrat) !important;
+    font-size: 16px;
+    width: 64%;
+    padding: 12px 0 4px;
+}

@@ -1,3 +1,75 @@
 {
-  "extends": "next/core-web-vitals"
+    // Configuration for JavaScript files
+    "extends": ["next/core-web-vitals"],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "rules": {
+        "prettier/prettier": [
+            "error",
+            {
+                "singleQuote": true,
+                "endOfLine": "auto"
+            }
+        ],
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "spaced-comment": ["off", "always", { "exceptions": ["-", "+", "/", "*"] }],
+        "@next/next/no-html-link-for-pages": ["error", "app/"]
+    },
+    "overrides": [
+        // Configuration for TypeScript files
+        {
+            "files": ["**/*.ts", "**/*.tsx"],
+            "plugins": ["@typescript-eslint", "unused-imports", "simple-import-sort", "sonarjs"],
+            "extends": ["airbnb-typescript", "next/core-web-vitals", "plugin:prettier/recommended"],
+            "parserOptions": {
+                "project": "./tsconfig.json"
+            },
+            "rules": {
+                "@typescript-eslint/no-var-requires": "error",
+                "prettier/prettier": [
+                    "error",
+                    {
+                        "singleQuote": true,
+                        "endOfLine": "auto"
+                    }
+                ],
+                "@typescript-eslint/consistent-type-imports": "error", // Ensure `import type` is used when it's necessary
+                "@typescript-eslint/no-unused-vars": "error", // check unused variables
+                "no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"], // Overrides Airbnb configuration and enable no-restricted-syntax
+                "import/prefer-default-export": "off", // Named export is easier to refactor automatically
+                "simple-import-sort/imports": "error", // Import configuration for `eslint-plugin-simple-import-sort`
+                "simple-import-sort/exports": "error", // Export configuration for `eslint-plugin-simple-import-sort`
+                "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }], //Check unused variables
+                "unused-imports/no-unused-imports": "error", //Checking unused imports
+                "no-useless-constructor": "off", //Disallow unnecessary constructors
+                "class-methods-use-this": "off", //Enforce that class methods utilize this
+                "no-param-reassign": [2, { "props": false }], //Disallow reassigning function parameters
+                "import/no-extraneous-dependencies": ["error", { "devDependencies": true }], //To avoid import errors in Instrumentation.node.ts file
+                "no-use-before-define": [
+                    "error",
+                    {
+                        "functions": true,
+                        "classes": true,
+                        "variables": true,
+                        "allowNamedExports": false
+                    }
+                ] //Disallow the use of variables before they are defined
+            }
+        },
+        // Configuration for testing
+        {
+            "files": ["**/*.test.ts", "**/*.test.tsx"],
+            "plugins": ["jest", "jest-formatting", "testing-library", "jest-dom"],
+            "extends": [
+                "plugin:jest/recommended",
+                "plugin:jest-formatting/recommended",
+                "plugin:testing-library/react",
+                "plugin:jest-dom/recommended"
+            ]
+        }
+    ]
 }

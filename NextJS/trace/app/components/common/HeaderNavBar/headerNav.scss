@@ -1,0 +1,35 @@
+@import './../../../styles/fonts.scss';
+@import './../../../styles/common/colorpalettes.scss';
+
+.header-nav-content {
+    display: flex;
+    height: 100%;
+    padding-left: 169px;
+
+    .content {
+        display: inline-block;
+        margin-right: 10px;
+        background-color: transparent;
+        font-family: 'Montserrat' !important;
+        color: $pg-neutral-white;
+        font-weight: 600;
+        height: 100%;
+    }
+
+    div:last-child {
+        margin-right: 0;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+
+        div {
+            margin-bottom: 1px;
+        }
+
+        div:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

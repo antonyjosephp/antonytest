@@ -1,0 +1,16 @@
+@import '../common/colorpalettes';
+@import '../fonts';
+
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+    min-height: 90vh;
+
+    .description {
+        font-size: 0.85rem;
+        width: 100%;
+    }
+
+}

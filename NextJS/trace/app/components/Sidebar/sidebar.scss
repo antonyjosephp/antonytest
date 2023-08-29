@@ -1,0 +1,213 @@
+@import './../../styles/common/colorpalettes.scss';
+@import './../../styles/fonts.scss';
+
+$hundred: 100%;
+$zero: 0;
+
+.sidebar {
+    position: relative;
+    background: $pg-cool-black;
+    font-family: 'Montserrat' !important;
+
+    .submenu-name {
+        margin-left: 8px;
+    }
+
+    .anticon {
+        font-size: 18px !important;
+    }
+
+    svg {
+        padding-right: 3px;
+        margin-left: -8px;
+    }
+
+    .trigger {
+        color: $pg-neutral-white;
+        position: absolute;
+        bottom: 20px;
+        left: 90%;
+        transform: translateX(-50%);
+        font-size: 20px;
+    }
+
+    .ant-menu-dark {
+        height: 100%;
+        padding-top: 10px;
+
+        .ant-menu-item {
+            display: inline-block;
+        }
+
+        .ant-menu-submenu {
+            display: contents;
+        }
+    }
+
+    .ant-menu-item {
+        height: 30px !important;
+        line-height: 30px !important;
+        font-size: 14px;
+        color: $pg-neutral-white !important;
+
+        &:hover,
+        &:active {
+            height: 30px;
+            background-color: $pg-neutral-white !important;
+            color: $pg-neutral-black !important;
+            font-family: 'Montserrat' !important;
+            border-radius: 10px 0 0 10px;
+            width: calc(#{$hundred} - 1px);
+        }
+
+        li > .ant-menu-item-only-child {
+            &:hover,
+            &:active {
+                pointer-events: none;
+                color: $pg-neutral-white !important;
+            }
+        }
+    }
+
+    .ant-menu-item-active,
+    .ant-menu-submenu-active {
+        font-family: 'Montserrat' !important;
+        border-radius: 10px 0 0 10px;
+        width: calc(#{$hundred} - 1px);
+        line-height: 30px;
+    }
+
+    .ant-menu-submenu-inline,
+    .ant-menu-submenu {
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+        color: $pg-neutral-white;
+        width: calc(#{$hundred} - 1px);
+
+        &:hover,
+        &:active {
+            background-color: $pg-neutral-black !important;
+        }
+    }
+
+    .ant-layout-sider {
+        max-width: 21% !important;
+        height: 100%;
+        min-width: 21% !important;
+        width: 21% !important;
+        position: fixed;
+        z-index: 9;
+    }
+
+    .ant-menu-item-selected {
+        background-color: $pg-neutral-white !important;
+        color: $pg-neutral-black !important;
+        font-family: 'Montserrat' !important;
+        border-radius: 14px 0 0 14px !important;
+        width: calc(#{$hundred} - 1px) !important;
+    }
+
+    .logo-collapsed {
+        .logo-text {
+            display: none !important;
+            opacity: 0;
+            transition: opacity 5s ease-in;
+        }
+    }
+
+    .logo-placeholder {
+        height: 70px;
+
+        .logo-text {
+            opacity: 1;
+            transition: opacity 5s ease-in-out;
+        }
+    }
+
+    // .menuItem {
+    //     padding-left: 30px !important;
+    // }
+
+    .profile-container {
+        display: block;
+        width: 100%;
+        color: $pg-neutral-white;
+        font-family: 'Montserrat' !important;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0 0 10px 1px;
+        padding-left: 12px;
+    }
+
+    .horizontal-line {
+        margin-left: 10px;
+        display: flex;
+        width: 90%;
+        border: 1px solid $pg-neutral-white;
+    }
+
+    .profile-container {
+        .horizontal-line {
+            bottom: 17%;
+            position: absolute;
+            margin-left: 0 !important;
+        }
+    }
+}
+
+.sidebar-collapsed {
+    .profile-container {
+        width: 100%;
+
+        .circle-image {
+            flex: 0.5 !important;
+            margin-left: 0 !important;
+            height: 39px !important;
+        }
+
+        .profile-info {
+            display: none !important;
+        }
+    }
+
+    .ant-layout-sider {
+        max-width: 5% !important;
+        min-width: 5% !important;
+        width: 5% !important;
+    }
+
+    .trigger {
+        left: 50% !important;
+    }
+
+    .horizontal-line {
+        margin-left: 0 !important;
+    }
+
+    .profile-container {
+        .horizontal-line {
+            margin-left: -10px !important;
+        }
+    }
+
+    .submenu-name {
+        display: none;
+    }
+
+    .logo {
+        float: none;
+        justify-content: center;
+        margin: auto;
+        text-align: center;
+    }
+
+    .ant-menu-dark {
+        .ant-menu-item {
+            display: inline-block;
+            padding-inline: calc(50% - 7px);
+        }
+    }
+}

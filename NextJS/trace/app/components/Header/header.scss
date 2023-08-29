@@ -1,0 +1,63 @@
+@import './../../styles/common/colorpalettes.scss';
+@import './../../styles/fonts.scss';
+
+.top-header {
+    height: 64px;
+    padding-inline: 50px;
+    background-color: $pg-header-green !important;
+    padding: 0;
+    position: fixed;
+    width: 79%;
+    z-index: 9;
+    margin-left: 21%;
+
+    .logo {
+        float: left;
+        width: 120px;
+        height: 31px;
+        margin: 10px 24px 16px 0;
+    }
+}
+
+.header-logo-container {
+    display: flex;
+    padding: 0 0 0 15px;
+    height: inherit;
+
+    .headerlogo {
+        color: $pg-neutral-white;
+        font-family: 'Montserrat' !important;
+        font-weight: 600;
+        font-size: 24px;
+    }
+
+    .header-split {
+        flex: 1;
+        margin-right: 10px;
+        
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .promo-title {
+        height: 50%;
+        line-height: 50px;
+        font-size: 12px;
+    }
+
+    .promo-content {
+        font-size: 14px;
+        font-weight: 100;
+
+        .promo-icon {
+            float: left;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        a {
+            color: $pg-neutral-white;
+        }
+    }
+}

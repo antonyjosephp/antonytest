@@ -1,0 +1,19 @@
+{
+    "dataProps": [
+        {
+            "promoContent": "Request Access",
+            "promoIcon": "LockFilled",
+            "promoLink": "/"
+        },
+        {
+            "promoContent": "Report an incident",
+            "promoIcon": "WarningFilled",
+            "promoLink": "/"
+        },
+        {
+            "promoContent": "Request a Training",
+            "promoIcon": "WechatFilled",
+            "promoLink": "/"
+        }
+    ]
+}
